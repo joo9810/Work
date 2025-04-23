@@ -1,0 +1,539 @@
+{"법령" : {
+    "근로기준법" : 
+            {   
+                "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+                "OC" : "sowon6393",
+                "type" : "JSON",
+                "ID" : "1872",
+                "LM" : "근로기준법",
+                "LANG":"KO"
+            },
+    "근로기준법 시행령" :
+            {
+                "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+                "OC" : "sowon6393",
+                "type" : "JSON",
+                "ID" : "3058",
+                "LM" : "근로기준법 시행령",
+                "LANG":"KO"
+            },
+    "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "130",
+            "LM" : "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률",
+            "LANG":"KO"
+        },
+        "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "3140",
+            "LM" : "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 시행령",
+            "LANG":"KO"
+        },
+        "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 시행규칙" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "6909",
+            "LM" : "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 시행규칙",
+            "LANG":"KO"
+        },
+
+    "조세특례제한법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "1584",
+            "LM" : "조세특례제한법",
+            "LANG":"KO"
+        },
+        "조세특례제한법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "4920",
+            "LM" : "조세특례제한법 시행령",
+            "LANG":"KO"
+        },
+        "조세특례제한법 시행규칙" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "8218",
+            "LM" : "조세특례제한법 시행규칙",
+            "LANG":"KO"
+        },                
+        
+    "국세기본법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "1586",
+            "LM" : "국세기본법",
+            "LANG":"KO"
+        },
+        "국세기본법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "2884",
+            "LM" : "국세기본법 시행령",
+            "LANG":"KO"
+        },
+    "모자보건법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "183",
+            "LM" : "모자보건법",
+            "LANG":"KO"
+        },
+    "여성의 경제활동 촉진과 경력단절 예방법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "10761",
+            "LM" : "여성의 경제활동 촉진과 경력단절 예방법",
+            "LANG":"KO"
+        },
+        "여성의 경제활동 촉진과 경력단절 예방법 시행규칙" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "10869",
+            "LM" : "여성의 경제활동 촉진과 경력단절 예방법 시행규칙",
+            "LANG":"KO"
+        },        
+    "기간제 및 단시간근로자 보호 등에 관한 법률" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "10356",
+            "LM" : "기간제 및 단시간근로자 보호 등에 관한 법률",
+            "LANG":"KO"
+        },
+        "기간제 및 단시간근로자 보호 등에 관한 법률 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "10461",
+            "LM" : "기간제 및 단시간근로자 보호 등에 관한 법률 시행령",
+            "LANG":"KO"
+        },
+    "고용보험법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "1761",
+            "LM" : "고용보험법",
+            "LANG":"KO"
+        },
+    "고용보험법 시행규칙" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "6288",
+            "LM" : "고용보험법 시행규칙",
+            "LANG":"KO"
+        },
+        "고용보험법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "2249",
+            "LM" : "고용보험법 시행령",
+            "LANG":"KO"
+        },
+    "영유아보육법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "191",
+            "LM" : "영유아보육법",
+            "LANG":"KO"
+        },        
+    "아이돌봄 지원법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "11537",
+            "LM" : "아이돌봄 지원법",
+            "LANG":"KO"
+        },  
+        "아이돌봄 지원법 시행규칙" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "11676",
+            "LM" : "아이돌봄 지원법 시행규칙",
+            "LANG":"KO"
+        },  
+    "아동수당법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "13103",
+            "LM" : "아동수당법",
+            "LANG":"KO"
+        }, 
+    "아동수당법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "13126",
+            "LM" : "아동수당법 시행령",
+            "LANG":"KO"
+        },
+    "최저임금법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "129",
+            "LM" : "최저임금법",
+            "LANG":"KO"
+        },    
+    "최저임금법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "5247",
+            "LM" : "최저임금법 시행령",
+            "LANG":"KO"
+        },
+    "최저임금법 시행규칙" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "8480",
+            "LM" : "최저임금법 시행규칙",
+            "LANG":"KO"
+        },
+    "임금채권보장법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "128",
+            "LM" : "임금채권보장법",
+            "LANG":"KO"
+        },
+    "임금채권보장법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "4551",
+            "LM" : "임금채권보장법 시행령",
+            "LANG":"KO"
+        },
+    "임금채권보장법 시행규칙" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "7898",
+            "LM" : "임금채권보장법 시행규칙",
+            "LANG":"KO"
+        },
+    "산업재해보상보험법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "1760",
+            "LM" : "산업재해보상보험법",
+            "LANG":"KO"
+        },
+    "산업재해보상보험법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "3793",
+            "LM" : "산업재해보상보험법 시행령",
+            "LANG":"KO"
+        },
+        "산업안전보건법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "1766",
+            "LM" : "산업안전보건법",
+            "LANG":"KO"
+        },
+        "파견근로자 보호 등에 관한 법률" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "122",
+            "LM" : "파견근로자 보호 등에 관한 법률",
+            "LANG":"KO"
+        },
+        "근로자퇴직급여 보장법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "9883",
+            "LM" : "근로자퇴직급여 보장법",
+            "LANG":"KO"
+        },
+        "근로자퇴직급여 보장법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "10035",
+            "LM" : "근로자퇴직급여 보장법 시행령",
+            "LANG":"KO"},
+        "민법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "1706",
+            "LM" : "민법",
+            "LANG":"KO"
+        },
+        "민사집행법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "9290",
+            "LM" : "민사집행법",
+            "LANG":"KO"
+        },
+        "민사집행법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "10014",
+            "LM" : "민사집행법 시행령",
+            "LANG":"KO"
+        },
+
+        "고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "9842",
+            "LM" : "고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률 시행령",
+            "LANG":"KO"
+        },
+        "장애인고용촉진 및 직업재활법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "1763",
+            "LM" : "장애인고용촉진 및 직업재활법",
+            "LANG":"KO"
+        },
+        "장애인고용촉진 및 직업재활법 시행령" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "4626",
+            "LM" : "장애인고용촉진 및 직업재활법 시행령",
+            "LANG":"KO"
+        },
+        "고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "9589",
+            "LM" : "고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률",
+            "LANG":"KO"
+        },
+        "행정심판법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "1363",
+            "LM" : "행정심판법",
+            "LANG":"KO"
+        },
+        "행정소송법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "1218",
+            "LM" : "행정소송법",
+            "LANG":"KO"
+        },
+        
+        "노동조합 및 노동관계조정법" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=eflaw",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "ID" : "143",
+            "LM" : "노동조합 및 노동관계조정법",
+            "LANG":"KO"
+        }
+    },
+
+"행정규칙":{
+    "평균임금산정특례고시" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "LID" : "22222",
+            "LM" : "평균임금산정특례고시",
+            "LANG":"KO"
+        },
+    "고용창출장려금·고용안정장려금의 신청 및 지급에 관한 규정" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "LID" : "55575",
+            "LM" : "고용창출장려금·고용안정장려금의 신청 및 지급에 관한 규정",
+            "LANG":"KO"
+        },
+    "노동위원회규칙" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "LID" : "2039730",
+            "LM" : "노동위원회규칙",
+            "LANG":"KO"
+        },
+    "퇴직연금제도 수급권의 담보제공 및 퇴직금 중간정산의 사유와 요건, 담보 한도 등에 관한 고시" : 
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "LID" : "40341",
+            "LM" : "퇴직연금제도 수급권의 담보제공 및 퇴직금 중간정산의 사유와 요건, 담보 한도 등에 관한 고시",
+            "LANG":"KO"
+        },
+    "개인형퇴직연금제도로의 이전 예외사유 해당금액 고시":
+        {
+            "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+            "OC" : "sowon6393",
+            "type" : "JSON",
+            "LID" : "40345",
+            "LM" : "개인형퇴직연금제도로의 이전 예외사유 해당금액 고시",
+            "LANG":"KO"   
+        },
+    "실업인정 및 재취업지원규정":
+    {
+        "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+        "OC" : "sowon6393",
+        "type" : "JSON",
+        "LID" : "2000801",
+        "LM" : "실업인정 및 재취업지원규정",
+        "LANG":"KO"   
+    },
+    "급여기초임금일액 산정규정":
+    {
+        "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+        "OC" : "sowon6393",
+        "type" : "JSON",
+        "LID" : "22126",
+        "LM" : "급여기초임금일액 산정규정",
+        "LANG":"KO"   
+    },
+    "근로자의 기준보수 고시":
+    {
+        "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+        "OC" : "sowon6393",
+        "type" : "JSON",
+        "LID" : "2035216",
+        "LM" : "근로자의 기준보수 고시",
+        "LANG":"KO"   
+    },
+    "구직급여 수급자 중 직업능력개발 훈련지시 우선 고려대상자 고시":
+    {
+        "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+        "OC" : "sowon6393",
+        "type" : "JSON",
+        "LID" : "22208",
+        "LM" : "구직급여 수급자 중 직업능력개발 훈련지시 우선 고려대상자 고시",
+        "LANG":"KO"   
+    },
+    "조기재취업 수당 지급제외 대상에 해당하는 임금액 고시":
+    { 
+        "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+        "OC" : "sowon6393",
+        "type" : "JSON",
+        "LID" : "87610",
+        "LM" : "조기재취업 수당 지급제외 대상에 해당하는 임금액 고시",
+        "LANG":"KO"   
+    },
+    "직업능력개발수당 고시":
+    { 
+        "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+        "OC" : "sowon6393",
+        "type" : "JSON",
+        "LID" : "22214",
+        "LM" : "직업능력개발수당 고시",
+        "LANG":"KO"   
+    },
+    "2025년 적용 최저임금 고시":
+    { 
+        "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+        "OC" : "sowon6393",
+        "type" : "JSON",
+        "LID" : "2002374",
+        "LM" : "2025년 적용 최저임금 고시",
+        "LANG":"KO"   
+    },
+    "근로감독관집무규정": 
+    { 
+        "url" : "http://www.law.go.kr/DRF/lawService.do?target=admrul",
+        "OC" : "sowon6393",
+        "type" : "JSON",
+        "LID" : "22064",
+        "LM" : "근로감독관집무규정",
+        "LANG":"KO"   
+    }
+    },
+"법률용어":{
+    "법률용어":
+    {
+        "url":"http://www.law.go.kr/DRF/lawSearch.do?target=lstrm",
+        "OC" : "sowon6393",
+        "type" : "JSON"
+    }
+}
+}
