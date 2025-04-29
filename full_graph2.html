@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "\uc548\ud604\uc6b0", "label": "\uc548\ud604\uc6b0", "shape": "dot"}, {"color": "#97c2fc", "id": "\ubbfc\uc11c\uc5f0", "label": "\ubbfc\uc11c\uc5f0", "shape": "dot"}, {"color": "#97c2fc", "id": "\ud55c\ubbfc\uc900", "label": "\ud55c\ubbfc\uc900", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc724\uc9c0\uc6b0", "label": "\uc724\uc9c0\uc6b0", "shape": "dot"}, {"color": "#97c2fc", "id": "\ucd5c\uc608\uc740", "label": "\ucd5c\uc608\uc740", "shape": "dot"}, {"color": "#97c2fc", "id": "\uad8c\ud604\uc900", "label": "\uad8c\ud604\uc900", "shape": "dot"}, {"color": "#97c2fc", "id": "\ud64d\uc218\uc544", "label": "\ud64d\uc218\uc544", "shape": "dot"}, {"color": "#97c2fc", "id": "\ud55c\uc9c0\ud638", "label": "\ud55c\uc9c0\ud638", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc774\uc8fc\uc6d0", "label": "\uc774\uc8fc\uc6d0", "shape": "dot"}, {"color": "#97c2fc", "id": "\ubc15\uc11c\uc900", "label": "\ubc15\uc11c\uc900", "shape": "dot"}, {"color": "#97c2fc", "id": "\ud64d\uc9c0\uc740", "label": "\ud64d\uc9c0\uc740", "shape": "dot"}, {"color": "#97c2fc", "id": "\uae40\ud0dc\uc724", "label": "\uae40\ud0dc\uc724", "shape": "dot"}, {"color": "#97c2fc", "id": "\ucd5c\ub2e4\uc740", "label": "\ucd5c\ub2e4\uc740", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc624\uc720\uc9c4", "label": "\uc624\uc720\uc9c4", "shape": "dot"}, {"color": "#97c2fc", "id": "\ucd5c\ud558\uc740", "label": "\ucd5c\ud558\uc740", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc2e0\uc18c\uc728", "label": "\uc2e0\uc18c\uc728", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc1a1\uc9c0\ud6c4", "label": "\uc1a1\uc9c0\ud6c4", "shape": "dot"}, {"color": "#97c2fc", "id": "\uae40\ub2e4\uc740", "label": "\uae40\ub2e4\uc740", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc724\uc9c0\uc6d0", "label": "\uc724\uc9c0\uc6d0", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc11c\ubbfc\uc7ac", "label": "\uc11c\ubbfc\uc7ac", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc2e0\ub3c4\uc724", "label": "\uc2e0\ub3c4\uc724", "shape": "dot"}, {"color": "#97c2fc", "id": "\uac15\uc9c0\ud638", "label": "\uac15\uc9c0\ud638", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc815\ud558\ub298", "label": "\uc815\ud558\ub298", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc2e0\ubbfc\uc9c0", "label": "\uc2e0\ubbfc\uc9c0", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc11c\uc9c0\uc6b0", "label": "\uc11c\uc9c0\uc6b0", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc774\ud558\ub9b0", "label": "\uc774\ud558\ub9b0", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc815\ubbfc\uc900", "label": "\uc815\ubbfc\uc900", "shape": "dot"}, {"color": "#97c2fc", "id": "\uc7a5\ud558\uc900", "label": "\uc7a5\ud558\uc900", "shape": "dot"}, {"color": "#97c2fc", "id": "\ubc30\uc218\uc544", "label": "\ubc30\uc218\uc544", "shape": "dot"}, {"color": "#97c2fc", "id": "\ud64d\uc9c0\ud638", "label": "\ud64d\uc9c0\ud638", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "\uc548\ud604\uc6b0", "title": "3185047\uc6d0\n01-24 13:16", "to": "\ubbfc\uc11c\uc5f0", "value": 3185047}, {"arrows": "to", "from": "\ud55c\ubbfc\uc900", "title": "1794250\uc6d0\n01-13 02:28", "to": "\uc724\uc9c0\uc6b0", "value": 1794250}, {"arrows": "to", "from": "\ucd5c\uc608\uc740", "title": "4241976\uc6d0\n01-12 13:22", "to": "\uad8c\ud604\uc900", "value": 4241976}, {"arrows": "to", "from": "\ud64d\uc218\uc544", "title": "993110\uc6d0\n01-03 04:37", "to": "\ubbfc\uc11c\uc5f0", "value": 993110}, {"arrows": "to", "from": "\ubbfc\uc11c\uc5f0", "title": "3329964\uc6d0\n01-05 09:10", "to": "\ud55c\uc9c0\ud638", "value": 3329964}, {"arrows": "to", "from": "\uc774\uc8fc\uc6d0", "title": "4103683\uc6d0\n01-09 10:41", "to": "\ubc15\uc11c\uc900", "value": 4103683}, {"arrows": "to", "from": "\uc774\uc8fc\uc6d0", "title": "3851091\uc6d0\n01-03 08:19", "to": "\ud64d\uc9c0\uc740", "value": 3851091}, {"arrows": "to", "from": "\uae40\ud0dc\uc724", "title": "4009586\uc6d0\n01-11 22:52", "to": "\ucd5c\ub2e4\uc740", "value": 4009586}, {"arrows": "to", "from": "\uc624\uc720\uc9c4", "title": "1042404\uc6d0\n01-18 04:31", "to": "\ucd5c\ub2e4\uc740", "value": 1042404}, {"arrows": "to", "from": "\ucd5c\ud558\uc740", "title": "2913770\uc6d0\n01-19 21:50", "to": "\ud55c\uc9c0\ud638", "value": 2913770}, {"arrows": "to", "from": "\ucd5c\ud558\uc740", "title": "1682278\uc6d0\n01-16 16:35", "to": "\ud64d\uc218\uc544", "value": 1682278}, {"arrows": "to", "from": "\ud55c\ubbfc\uc900", "title": "1451364\uc6d0\n01-04 14:14", "to": "\uc724\uc9c0\uc6b0", "value": 1451364}, {"arrows": "to", "from": "\uc2e0\uc18c\uc728", "title": "3540749\uc6d0\n01-09 14:57", "to": "\uc548\ud604\uc6b0", "value": 3540749}, {"arrows": "to", "from": "\uae40\ud0dc\uc724", "title": "2479308\uc6d0\n01-08 02:27", "to": "\ud64d\uc9c0\uc740", "value": 2479308}, {"arrows": "to", "from": "\uc774\uc8fc\uc6d0", "title": "3185166\uc6d0\n01-05 09:05", "to": "\uc1a1\uc9c0\ud6c4", "value": 3185166}, {"arrows": "to", "from": "\uae40\ub2e4\uc740", "title": "4149519\uc6d0\n01-20 12:37", "to": "\ucd5c\uc608\uc740", "value": 4149519}, {"arrows": "to", "from": "\ubc15\uc11c\uc900", "title": "2472899\uc6d0\n01-07 14:36", "to": "\uc724\uc9c0\uc6d0", "value": 2472899}, {"arrows": "to", "from": "\uae40\ud0dc\uc724", "title": "809578\uc6d0\n01-12 21:30", "to": "\uc11c\ubbfc\uc7ac", "value": 809578}, {"arrows": "to", "from": "\uc2e0\uc18c\uc728", "title": "4158315\uc6d0\n01-16 13:06", "to": "\uc624\uc720\uc9c4", "value": 4158315}, {"arrows": "to", "from": "\uae40\ud0dc\uc724", "title": "3630356\uc6d0\n01-23 00:03", "to": "\uc2e0\uc18c\uc728", "value": 3630356}, {"arrows": "to", "from": "\uc2e0\ub3c4\uc724", "title": "4955042\uc6d0\n01-25 21:42", "to": "\uc1a1\uc9c0\ud6c4", "value": 4955042}, {"arrows": "to", "from": "\ucd5c\uc608\uc740", "title": "737213\uc6d0\n01-09 01:54", "to": "\uc11c\ubbfc\uc7ac", "value": 737213}, {"arrows": "to", "from": "\uac15\uc9c0\ud638", "title": "1315401\uc6d0\n01-10 15:50", "to": "\ucd5c\ud558\uc740", "value": 1315401}, {"arrows": "to", "from": "\uae40\ud0dc\uc724", "title": "715035\uc6d0\n01-14 16:50", "to": "\uc815\ud558\ub298", "value": 715035}, {"arrows": "to", "from": "\uc2e0\uc18c\uc728", "title": "4804146\uc6d0\n01-20 01:54", "to": "\uc2e0\ubbfc\uc9c0", "value": 4804146}, {"arrows": "to", "from": "\ucd5c\ud558\uc740", "title": "2053861\uc6d0\n01-11 05:33", "to": "\ucd5c\ub2e4\uc740", "value": 2053861}, {"arrows": "to", "from": "\uc11c\uc9c0\uc6b0", "title": "4402298\uc6d0\n01-29 14:22", "to": "\ubbfc\uc11c\uc5f0", "value": 4402298}, {"arrows": "to", "from": "\uc774\ud558\ub9b0", "title": "2958747\uc6d0\n01-25 03:10", "to": "\uac15\uc9c0\ud638", "value": 2958747}, {"arrows": "to", "from": "\uc815\ubbfc\uc900", "title": "2867909\uc6d0\n01-20 06:26", "to": "\uc774\ud558\ub9b0", "value": 2867909}, {"arrows": "to", "from": "\uc11c\uc9c0\uc6b0", "title": "987271\uc6d0\n01-27 05:46", "to": "\uc7a5\ud558\uc900", "value": 987271}, {"arrows": "to", "from": "\ud55c\ubbfc\uc900", "title": "1207977\uc6d0\n01-05 19:42", "to": "\uc624\uc720\uc9c4", "value": 1207977}, {"arrows": "to", "from": "\ubc15\uc11c\uc900", "title": "1708969\uc6d0\n01-02 20:34", "to": "\uc815\ud558\ub298", "value": 1708969}, {"arrows": "to", "from": "\uc548\ud604\uc6b0", "title": "562934\uc6d0\n01-13 22:02", "to": "\ucd5c\uc608\uc740", "value": 562934}, {"arrows": "to", "from": "\uc2e0\ubbfc\uc9c0", "title": "1526930\uc6d0\n01-26 20:09", "to": "\uae40\ud0dc\uc724", "value": 1526930}, {"arrows": "to", "from": "\uac15\uc9c0\ud638", "title": "590758\uc6d0\n01-26 21:56", "to": "\uc548\ud604\uc6b0", "value": 590758}, {"arrows": "to", "from": "\uc1a1\uc9c0\ud6c4", "title": "2397017\uc6d0\n01-02 17:16", "to": "\ubc15\uc11c\uc900", "value": 2397017}, {"arrows": "to", "from": "\uc548\ud604\uc6b0", "title": "4668372\uc6d0\n01-15 10:47", "to": "\uc11c\ubbfc\uc7ac", "value": 4668372}, {"arrows": "to", "from": "\uc724\uc9c0\uc6d0", "title": "637687\uc6d0\n01-11 04:53", "to": "\uc724\uc9c0\uc6b0", "value": 637687}, {"arrows": "to", "from": "\ud64d\uc9c0\uc740", "title": "3930569\uc6d0\n01-06 02:35", "to": "\uc7a5\ud558\uc900", "value": 3930569}, {"arrows": "to", "from": "\uc815\ubbfc\uc900", "title": "4151047\uc6d0\n01-28 04:55", "to": "\uc774\uc8fc\uc6d0", "value": 4151047}, {"arrows": "to", "from": "\uae40\ud0dc\uc724", "title": "2858307\uc6d0\n01-21 03:45", "to": "\ud64d\uc9c0\uc740", "value": 2858307}, {"arrows": "to", "from": "\ud64d\uc9c0\uc740", "title": "1021747\uc6d0\n01-09 11:49", "to": "\ubbfc\uc11c\uc5f0", "value": 1021747}, {"arrows": "to", "from": "\uae40\ud0dc\uc724", "title": "4785875\uc6d0\n01-20 18:17", "to": "\uad8c\ud604\uc900", "value": 4785875}, {"arrows": "to", "from": "\ubc30\uc218\uc544", "title": "310780\uc6d0\n01-07 20:51", "to": "\uc11c\ubbfc\uc7ac", "value": 310780}, {"arrows": "to", "from": "\ubc15\uc11c\uc900", "title": "3883749\uc6d0\n01-07 20:02", "to": "\uc774\uc8fc\uc6d0", "value": 3883749}, {"arrows": "to", "from": "\ubc15\uc11c\uc900", "title": "4877795\uc6d0\n01-21 23:11", "to": "\uc774\ud558\ub9b0", "value": 4877795}, {"arrows": "to", "from": "\uad8c\ud604\uc900", "title": "1719553\uc6d0\n01-11 17:27", "to": "\uc1a1\uc9c0\ud6c4", "value": 1719553}, {"arrows": "to", "from": "\ud64d\uc9c0\uc740", "title": "42269\uc6d0\n01-14 00:59", "to": "\uc11c\ubbfc\uc7ac", "value": 42269}, {"arrows": "to", "from": "\ucd5c\ud558\uc740", "title": "2784905\uc6d0\n01-15 13:25", "to": "\uae40\ub2e4\uc740", "value": 2784905}, {"arrows": "to", "from": "\ud64d\uc9c0\ud638", "title": "1422738\uc6d0\n01-09 19:12", "to": "\uc11c\ubbfc\uc7ac", "value": 1422738}, {"arrows": "to", "from": "\uc624\uc720\uc9c4", "title": "1251804\uc6d0\n01-20 02:28", "to": "\uc7a5\ud558\uc900", "value": 1251804}, {"arrows": "to", "from": "\uc724\uc9c0\uc6d0", "title": "1449513\uc6d0\n01-20 16:04", "to": "\uc2e0\ubbfc\uc9c0", "value": 1449513}, {"arrows": "to", "from": "\uc724\uc9c0\uc6b0", "title": "1140150\uc6d0\n01-17 00:31", "to": "\ud64d\uc9c0\ud638", "value": 1140150}, {"arrows": "to", "from": "\ubc30\uc218\uc544", "title": "3654534\uc6d0\n01-04 21:11", "to": "\uc2e0\ub3c4\uc724", "value": 3654534}, {"arrows": "to", "from": "\uc2e0\ubbfc\uc9c0", "title": "3257669\uc6d0\n01-27 01:47", "to": "\ud55c\uc9c0\ud638", "value": 3257669}, {"arrows": "to", "from": "\ubbfc\uc11c\uc5f0", "title": "1299629\uc6d0\n01-31 02:47", "to": "\uad8c\ud604\uc900", "value": 1299629}, {"arrows": "to", "from": "\uc11c\uc9c0\uc6b0", "title": "3333865\uc6d0\n01-21 22:17", "to": "\uc815\ud558\ub298", "value": 3333865}, {"arrows": "to", "from": "\uc7a5\ud558\uc900", "title": "3378125\uc6d0\n01-07 19:42", "to": "\ubc15\uc11c\uc900", "value": 3378125}, {"arrows": "to", "from": "\ud64d\uc9c0\uc740", "title": "2007246\uc6d0\n01-23 13:13", "to": "\uc774\ud558\ub9b0", "value": 2007246}, {"arrows": "to", "from": "\ucd5c\ud558\uc740", "title": "2341474\uc6d0\n01-28 20:25", "to": "\ucd5c\uc608\uc740", "value": 2341474}, {"arrows": "to", "from": "\ubc15\uc11c\uc900", "title": "2466353\uc6d0\n01-08 13:45", "to": "\uae40\ub2e4\uc740", "value": 2466353}, {"arrows": "to", "from": "\uc2e0\uc18c\uc728", "title": "3199889\uc6d0\n01-14 23:10", "to": "\ubc15\uc11c\uc900", "value": 3199889}, {"arrows": "to", "from": "\uc2e0\ub3c4\uc724", "title": "4540641\uc6d0\n01-06 14:05", "to": "\ud55c\ubbfc\uc900", "value": 4540641}, {"arrows": "to", "from": "\ucd5c\uc608\uc740", "title": "4047155\uc6d0\n01-01 09:53", "to": "\ud64d\uc218\uc544", "value": 4047155}, {"arrows": "to", "from": "\uae40\ub2e4\uc740", "title": "2247976\uc6d0\n01-22 12:56", "to": "\uc1a1\uc9c0\ud6c4", "value": 2247976}, {"arrows": "to", "from": "\uc815\ubbfc\uc900", "title": "816208\uc6d0\n01-09 14:33", "to": "\uc624\uc720\uc9c4", "value": 816208}, {"arrows": "to", "from": "\ud64d\uc9c0\uc740", "title": "4059320\uc6d0\n01-03 10:20", "to": "\ubc15\uc11c\uc900", "value": 4059320}, {"arrows": "to", "from": "\uc11c\uc9c0\uc6b0", "title": "2014323\uc6d0\n01-09 12:10", "to": "\ud55c\uc9c0\ud638", "value": 2014323}, {"arrows": "to", "from": "\ud55c\ubbfc\uc900", "title": "3926261\uc6d0\n01-05 11:17", "to": "\ucd5c\ud558\uc740", "value": 3926261}, {"arrows": "to", "from": "\uc2e0\ubbfc\uc9c0", "title": "4791108\uc6d0\n01-19 17:56", "to": "\uae40\ub2e4\uc740", "value": 4791108}, {"arrows": "to", "from": "\uc815\ubbfc\uc900", "title": "3735287\uc6d0\n01-20 02:17", "to": "\uc724\uc9c0\uc6d0", "value": 3735287}, {"arrows": "to", "from": "\uae40\ub2e4\uc740", "title": "3332173\uc6d0\n01-23 12:52", "to": "\uc548\ud604\uc6b0", "value": 3332173}, {"arrows": "to", "from": "\ud55c\uc9c0\ud638", "title": "335342\uc6d0\n01-03 20:51", "to": "\ud64d\uc218\uc544", "value": 335342}, {"arrows": "to", "from": "\uc11c\ubbfc\uc7ac", "title": "973025\uc6d0\n01-11 05:09", "to": "\uc11c\uc9c0\uc6b0", "value": 973025}, {"arrows": "to", "from": "\ud64d\uc9c0\uc740", "title": "62169\uc6d0\n01-21 07:15", "to": "\uc7a5\ud558\uc900", "value": 62169}, {"arrows": "to", "from": "\ucd5c\uc608\uc740", "title": "183652\uc6d0\n01-06 00:49", "to": "\ud55c\uc9c0\ud638", "value": 183652}, {"arrows": "to", "from": "\ucd5c\ub2e4\uc740", "title": "572014\uc6d0\n01-19 10:29", "to": "\ubc30\uc218\uc544", "value": 572014}, {"arrows": "to", "from": "\uc2e0\ub3c4\uc724", "title": "3280487\uc6d0\n01-10 09:50", "to": "\uc7a5\ud558\uc900", "value": 3280487}, {"arrows": "to", "from": "\uc11c\ubbfc\uc7ac", "title": "101803\uc6d0\n01-21 23:41", "to": "\uad8c\ud604\uc900", "value": 101803}, {"arrows": "to", "from": "\uc11c\uc9c0\uc6b0", "title": "356998\uc6d0\n01-08 01:35", "to": "\ucd5c\ub2e4\uc740", "value": 356998}, {"arrows": "to", "from": "\ud55c\uc9c0\ud638", "title": "2336814\uc6d0\n01-06 05:45", "to": "\uc724\uc9c0\uc6d0", "value": 2336814}, {"arrows": "to", "from": "\uc774\uc8fc\uc6d0", "title": "2165674\uc6d0\n01-21 19:31", "to": "\ubc15\uc11c\uc900", "value": 2165674}, {"arrows": "to", "from": "\uc2e0\uc18c\uc728", "title": "2585243\uc6d0\n01-05 00:08", "to": "\uc1a1\uc9c0\ud6c4", "value": 2585243}, {"arrows": "to", "from": "\ud64d\uc9c0\ud638", "title": "1411226\uc6d0\n01-13 00:29", "to": "\uae40\ub2e4\uc740", "value": 1411226}, {"arrows": "to", "from": "\uc1a1\uc9c0\ud6c4", "title": "356872\uc6d0\n01-07 03:52", "to": "\uae40\ud0dc\uc724", "value": 356872}, {"arrows": "to", "from": "\ubbfc\uc11c\uc5f0", "title": "2613997\uc6d0\n01-13 07:43", "to": "\ubc15\uc11c\uc900", "value": 2613997}, {"arrows": "to", "from": "\uc2e0\uc18c\uc728", "title": "2357388\uc6d0\n01-14 20:15", "to": "\uc11c\uc9c0\uc6b0", "value": 2357388}, {"arrows": "to", "from": "\ud55c\uc9c0\ud638", "title": "713581\uc6d0\n01-09 01:07", "to": "\uc724\uc9c0\uc6b0", "value": 713581}, {"arrows": "to", "from": "\uad8c\ud604\uc900", "title": "1602928\uc6d0\n01-28 15:46", "to": "\ubc30\uc218\uc544", "value": 1602928}, {"arrows": "to", "from": "\ud64d\uc9c0\uc740", "title": "2305095\uc6d0\n01-18 15:33", "to": "\uc724\uc9c0\uc6d0", "value": 2305095}, {"arrows": "to", "from": "\uc2e0\ubbfc\uc9c0", "title": "2314532\uc6d0\n01-21 20:45", "to": "\ud64d\uc9c0\ud638", "value": 2314532}, {"arrows": "to", "from": "\uc815\ubbfc\uc900", "title": "4911457\uc6d0\n01-21 20:29", "to": "\uc2e0\uc18c\uc728", "value": 4911457}, {"arrows": "to", "from": "\uc548\ud604\uc6b0", "title": "3519624\uc6d0\n01-07 10:30", "to": "\uc724\uc9c0\uc6b0", "value": 3519624}, {"arrows": "to", "from": "\uad8c\ud604\uc900", "title": "2776023\uc6d0\n01-02 09:41", "to": "\ubc30\uc218\uc544", "value": 2776023}, {"arrows": "to", "from": "\uc1a1\uc9c0\ud6c4", "title": "4665718\uc6d0\n01-10 05:24", "to": "\uae40\ud0dc\uc724", "value": 4665718}, {"arrows": "to", "from": "\ucd5c\uc608\uc740", "title": "2674752\uc6d0\n01-03 23:39", "to": "\uac15\uc9c0\ud638", "value": 2674752}, {"arrows": "to", "from": "\ud64d\uc218\uc544", "title": "4152460\uc6d0\n01-19 19:43", "to": "\uc624\uc720\uc9c4", "value": 4152460}, {"arrows": "to", "from": "\uae40\ud0dc\uc724", "title": "2601739\uc6d0\n01-28 21:58", "to": "\uc815\ud558\ub298", "value": 2601739}, {"arrows": "to", "from": "\ud55c\uc9c0\ud638", "title": "721886\uc6d0\n01-13 15:51", "to": "\ubc15\uc11c\uc900", "value": 721886}, {"arrows": "to", "from": "\uc7a5\ud558\uc900", "title": "4131609\uc6d0\n01-08 10:36", "to": "\uc11c\ubbfc\uc7ac", "value": 4131609}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
